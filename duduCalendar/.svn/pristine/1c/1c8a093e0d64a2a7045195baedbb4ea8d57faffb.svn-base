@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수정 로그</title>
+<script type="text/javascript" src="js/egovframework/com/jQuery.js"></script>
+<link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/com/com.css'/>">
+<link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/com/cop/smt/sdm/dept_schdule_manage.css'/>">
+<link href="https://webfontworld.github.io/TheJamsil/TheJamsil.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="<c:url value='../../css/dudu/nav.css'/>">
+<link type="text/css" rel="stylesheet" href="<c:url value='../../css/dudu/pjlist.css'/>">
+
+</head>
+<body>
+	<c:forEach items="${logResult}" var="pllist">
+		<table>
+			<tr>
+				<td>수정 전 제목 : ${pllist.logOldtitle }</td>
+				<td>수정 후 제목 : ${pllist.logNewtitle }</td>
+			</tr>
+			<tr>
+				<td>수정 전 내용 : ${pllist.logOldtext }</td>
+				<td>수정 후 내용 : ${pllist.logNewtext }</td>
+			</tr>
+			<tr>
+				<td>수정 전 참여자 : ${pllist.logOldmember }</td>
+				<td>수정 후 참여자 : ${pllist.logNewmember }</td>
+			</tr>
+			<tr>
+				<td>수정 전 시작일 : ${pllist.logOldstart }</td>
+				<td>수정 후 시작일 : ${pllist.logNewstart }</td>
+			</tr>
+			<tr>
+				<td>수정 전 마감일 : ${pllist.logOldend }</td>
+				<td>수정 후 마감일 : ${pllist.logNewend }</td>
+			</tr>
+			<tr>
+				<td>수정 전 색깔 : ${pllist.logOldcolor }</td>
+				<td>수정 후 색깔 : ${pllist.logNewcolor }</td>
+			</tr>
+		</table>
+	</c:forEach>
+</body>
+</html>
